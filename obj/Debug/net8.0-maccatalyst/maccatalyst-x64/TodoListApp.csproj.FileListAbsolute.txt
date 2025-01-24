@@ -266,9 +266,6 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccat
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -281,6 +278,9 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccat
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.outputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist

@@ -5,10 +5,11 @@ namespace ToDoListApp
     public class TaskItem
     {
         [PrimaryKey, AutoIncrement]
-        public int Id { get; set; } // Unique identifier for database
+        public int Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public bool IsCompleted { get; set; }
 
-        public string Title { get; set; } = string.Empty; // Task name
-
-        public bool IsCompleted { get; set; } // Whether the task is completed
+        public string Priority { get; set; } = "Medium";
     }
+
 }

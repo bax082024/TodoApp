@@ -2,20 +2,44 @@
     x:Class="ToDoListApp.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="To-Do List">
+    BackgroundColor="DarkSlateGray">
 
-    <VerticalStackLayout Padding="10" Spacing="10">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <!--  Headline  -->
+        <Label
+            FontAttributes="Bold"
+            FontSize="32"
+            HorizontalOptions="Center"
+            Text="To-Do List"
+            TextColor="OrangeRed" />
+
         <!--  Entry for new tasks  -->
-        <HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
             <Entry
                 x:Name="TaskEntry"
-                HorizontalOptions="FillAndExpand"
-                Placeholder="Enter a new task" />
-            <Button Clicked="OnAddTaskClicked" Text="Add" />
+                BackgroundColor="#F2F2F2"
+                Placeholder="Enter a new task"
+                PlaceholderColor="Gray"
+                TextColor="Black"
+                WidthRequest="250" />
+            <Button
+                BackgroundColor="Goldenrod"
+                Clicked="OnAddTaskClicked"
+                CornerRadius="10"
+                Text="Add"
+                TextColor="White" />
+            <Picker
+                x:Name="PriorityPicker"
+                Title="Priority"
+                ItemsSource="{x:StaticResource PriorityList}"
+                WidthRequest="120" />
         </HorizontalStackLayout>
 
         <!--  List of tasks  -->
-        <CollectionView x:Name="TaskList" SelectionMode="None">
+        <CollectionView
+            x:Name="TaskList"
+            BackgroundColor="#F9F9F9"
+            SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <SwipeView>
@@ -27,11 +51,26 @@
                                     Text="Delete" />
                             </SwipeItems>
                         </SwipeView.RightItems>
-                        <Grid Padding="5" ColumnDefinitions="Auto, *">
-                            <CheckBox CheckedChanged="OnTaskCheckedChanged" IsChecked="{Binding IsCompleted}" />
-                            <Label Text="{Binding Title}" VerticalOptions="Center" />
-                        </Grid>
+                        <Frame
+                            Margin="5"
+                            Padding="10"
+                            BackgroundColor="#EFEFEF"
+                            CornerRadius="10">
+                            <Grid Padding="5" ColumnDefinitions="Auto, *">
+                                <CheckBox
+                                    CheckedChanged="OnTaskCheckedChanged"
+                                    IsChecked="{Binding IsCompleted}"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    Text="{Binding Title}"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                            </Grid>
+                        </Frame>
                     </SwipeView>
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

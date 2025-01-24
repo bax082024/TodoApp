@@ -42,8 +42,13 @@ public partial class MainPage : ContentPage
             Tasks.Add(newTask);
             TaskEntry.Text = string.Empty;
 
-            var result = await _database.SaveTaskAsync(newTask); // Save to database
+            var result = await _database.SaveTaskAsync(newTask);
             Console.WriteLine($"Task saved to database with result: {result}");
+
+            // Animate scrolling to the last task
+            await Task.Delay(100); // Optional delay for a smoother experience
+            TaskList.ScrollTo(Tasks.Last(), position: ScrollToPosition.End, animate: true);
+
         }
     }
 
