@@ -67,6 +67,12 @@
                                     Text="{Binding Title}"
                                     TextColor="Black"
                                     VerticalOptions="Center" />
+                                <Label
+                                    Grid.Column="2"
+                                    FontAttributes="Bold"
+                                    Text="{Binding Priority}"
+                                    TextColor="{Binding Priority, Converter={StaticResource PriorityColorConverter}}"
+                                    VerticalOptions="Center" />
                             </Grid>
                         </Frame>
                     </SwipeView>

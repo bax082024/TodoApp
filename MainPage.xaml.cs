@@ -38,17 +38,18 @@ public partial class MainPage : ContentPage
     {
         if (!string.IsNullOrWhiteSpace(TaskEntry.Text))
         {
-            var newTask = new TaskItem { Title = TaskEntry.Text };
+            var selectedPriority = PriorityPicker.SelectedItem?.ToString() ?? "Medium";
+
+            var newTask = new TaskItem
+            {
+                Title = TaskEntry.Text,
+                Priority = selectedPriority
+            };
+
             Tasks.Add(newTask);
             TaskEntry.Text = string.Empty;
 
-            var result = await _database.SaveTaskAsync(newTask);
-            Console.WriteLine($"Task saved to database with result: {result}");
-
-            // Animate scrolling to the last task
-            await Task.Delay(100); // Optional delay for a smoother experience
-            TaskList.ScrollTo(Tasks.Last(), position: ScrollToPosition.End, animate: true);
-
+            await _database.SaveTaskAsync(newTask);
         }
     }
 
