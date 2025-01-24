@@ -57,7 +57,13 @@
         </Frame>
 
         <!--  List of tasks  -->
-        <CollectionView x:Name="TaskList" SelectionMode="None">
+        <CollectionView
+            x:Name="TaskList"
+            CanDrag="True"
+            CanDrop="True"
+            DragStarting="OnDragStarting"
+            DropCompleted="OnDropCompleted"
+            SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <SwipeView>

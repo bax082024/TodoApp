@@ -82,6 +82,15 @@ public partial class MainPage : ContentPage
             Tasks.Add(task);
         }
     }
+
+    private void OnDragStarting(object sender, DragStartingEventArgs e)
+    {
+        if (sender is BindableObject bindable && bindable.BindingContext is TaskItem task)
+        {
+            e.Data.Properties["Task"] = task; // Pass the dragged task as data
+        }
+    }
+
 }
 
 
