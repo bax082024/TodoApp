@@ -13,8 +13,10 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+        TaskList.ItemsSource = Tasks;
+
         string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "tasks.db");
-        _database = new DatabaseService(dbPath);
+        _database = new DatabaseService(dbPath);       
 
         LoadTasksAsync();
     }
@@ -22,30 +24,40 @@ public partial class MainPage : ContentPage
     private async void LoadTasksAsync()
     {
         var tasks = await _database.GetTasksAsync();
+        Console.WriteLine($"Tasks loaded: {tasks.Count}");
+
         foreach (var task in tasks)
         {
             Tasks.Add(task);
+            Console.WriteLine($"Loaded task: {task.Title}");
         }
     }
 
     // Add new task
-    private void OnAddTaskClicked(object sender, EventArgs e)
+    private async void OnAddTaskClicked(object sender, EventArgs e)
     {
         if (!string.IsNullOrWhiteSpace(TaskEntry.Text))
         {
-            Tasks.Add(new TaskItem { Title = TaskEntry.Text });
+            var newTask = new TaskItem { Title = TaskEntry.Text };
+            Tasks.Add(newTask);
             TaskEntry.Text = string.Empty;
+
+            var result = await _database.SaveTaskAsync(newTask); // Save to database
+            Console.WriteLine($"Task saved to database with result: {result}");
         }
     }
 
+
     // Delete task
-    private void OnDeleteTaskSwiped(object sender, EventArgs e)
+    private async void OnDeleteTaskSwiped(object sender, EventArgs e)
     {
         if (sender is SwipeItem swipeItem && swipeItem.BindingContext is TaskItem task)
         {
             Tasks.Remove(task);
+            await _database.DeleteTaskAsync(task);
         }
     }
+
 
     // Mark task complete
     private void OnTaskCheckedChanged(object sender, CheckedChangedEventArgs e)

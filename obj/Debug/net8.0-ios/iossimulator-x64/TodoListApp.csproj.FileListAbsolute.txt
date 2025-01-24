@@ -16,6 +16,10 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Maui.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Maui.Essentials.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Maui.Graphics.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\SQLite-net.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\SQLitePCLRaw.batteries_v2.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\SQLitePCLRaw.core.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\SQLitePCLRaw.provider.sqlite3.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\cs\Microsoft.Maui.Controls.resources.dll

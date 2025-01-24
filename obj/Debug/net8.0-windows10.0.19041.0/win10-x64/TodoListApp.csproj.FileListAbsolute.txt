@@ -39,6 +39,10 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -75,6 +79,7 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\zh-Hant\Microsoft.Maui.Controls.resources.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Maui.Controls.HotReload.Forms.dll

@@ -24,8 +24,7 @@
                                 <SwipeItem
                                     BackgroundColor="Red"
                                     Invoked="OnDeleteTaskSwiped"
-                                    Text="Delete"
-                                    TextColor="White" />
+                                    Text="Delete" />
                             </SwipeItems>
                         </SwipeView.RightItems>
                         <Grid Padding="5" ColumnDefinitions="Auto, *">
