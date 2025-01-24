@@ -1,20 +1,28 @@
 ﻿using System.Globalization;
 
-public class PriorityColorConverter : IValueConverter
+namespace TodoListApp
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public class PriorityColorConverter : IValueConverter
     {
-        return value.ToString() switch
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            "High" => Colors.Red,
-            "Medium" => Colors.Orange,
-            "Low" => Colors.Green,
-            _ => Colors.Black
-        };
-    }
+            if (value is string priority)
+            {
+                return priority switch
+                {
+                    "High" => Colors.Red,
+                    "Medium" => Colors.Orange,
+                    "Low" => Colors.Green,
+                    _ => Colors.Gray
+                };
+            }
+            return Colors.Gray;
+        }
 
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        throw new NotImplementedException();
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
+

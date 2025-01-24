@@ -6,7 +6,9 @@
     xmlns:local="clr-namespace:TodoListApp">
     <Application.Resources>
         <ResourceDictionary>
+            <local:PriorityColorConverter x:Key="PriorityColorConverter" />
             <x:Array x:Key="PriorityList" Type="{x:Type x:String}">
+
                 <x:String>Low</x:String>
                 <x:String>Medium</x:String>
                 <x:String>High</x:String>

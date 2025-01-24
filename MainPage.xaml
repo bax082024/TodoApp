@@ -13,33 +13,50 @@
             Text="To-Do List"
             TextColor="OrangeRed" />
 
-        <!--  Entry for new tasks  -->
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-            <Entry
-                x:Name="TaskEntry"
-                BackgroundColor="#F2F2F2"
-                Placeholder="Enter a new task"
-                PlaceholderColor="Gray"
-                TextColor="Black"
-                WidthRequest="250" />
-            <Button
-                BackgroundColor="Goldenrod"
-                Clicked="OnAddTaskClicked"
-                CornerRadius="10"
-                Text="Add"
-                TextColor="White" />
-            <Picker
-                x:Name="PriorityPicker"
-                Title="Priority"
-                ItemsSource="{x:StaticResource PriorityList}"
-                WidthRequest="120" />
-        </HorizontalStackLayout>
+        <!--  Input Section  -->
+        <Frame
+            Padding="10"
+            BackgroundColor="LightYellow"
+            CornerRadius="10">
+            <Grid ColumnDefinitions="*, Auto, Auto" RowDefinitions="Auto">
+                <!--  Task Entry  -->
+                <Entry
+                    x:Name="TaskEntry"
+                    Grid.Column="0"
+                    Margin="0"
+                    HorizontalOptions="Fill"
+                    Placeholder="Enter a new task"
+                    VerticalOptions="Center" />
+
+                <!--  Priority Picker  -->
+                <Picker
+                    x:Name="PriorityPicker"
+                    Title="Priority"
+                    Grid.Column="1"
+                    Margin="10,0,10,0"
+                    HorizontalOptions="Center"
+                    ItemsSource="{StaticResource PriorityList}"
+                    SelectedItem="{Binding SelectedPriority, Mode=TwoWay}"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    WidthRequest="100" />
+
+                <!--  Add Button  -->
+                <Button
+                    Grid.Column="2"
+                    Padding="10"
+                    BackgroundColor="#FFA500"
+                    Clicked="OnAddTaskClicked"
+                    CornerRadius="20"
+                    HorizontalOptions="End"
+                    Text="Add"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+        </Frame>
 
         <!--  List of tasks  -->
-        <CollectionView
-            x:Name="TaskList"
-            BackgroundColor="#F9F9F9"
-            SelectionMode="None">
+        <CollectionView x:Name="TaskList" SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <SwipeView>
@@ -54,29 +71,33 @@
                         <Frame
                             Margin="5"
                             Padding="10"
-                            BackgroundColor="#EFEFEF"
+                            BackgroundColor="LightYellow"
                             CornerRadius="10">
-                            <Grid Padding="5" ColumnDefinitions="Auto, *">
+                            <Grid Padding="5" ColumnDefinitions="Auto, *, Auto">
+                                <!--  Checkbox  -->
                                 <CheckBox
                                     CheckedChanged="OnTaskCheckedChanged"
                                     IsChecked="{Binding IsCompleted}"
                                     VerticalOptions="Center" />
+
+                                <!--  Task Title  -->
                                 <Label
                                     Grid.Column="1"
                                     FontSize="16"
                                     Text="{Binding Title}"
-                                    TextColor="Black"
                                     VerticalOptions="Center" />
+
+                                <!--  Priority  -->
                                 <Label
                                     Grid.Column="2"
-                                    FontAttributes="Bold"
+                                    FontSize="14"
+                                    HorizontalOptions="End"
                                     Text="{Binding Priority}"
                                     TextColor="{Binding Priority, Converter={StaticResource PriorityColorConverter}}"
                                     VerticalOptions="Center" />
                             </Grid>
                         </Frame>
                     </SwipeView>
-
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

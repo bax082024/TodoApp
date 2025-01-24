@@ -266,7 +266,6 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.inputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-ios\iossimulator-x64\mauifont.inputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.inputs
