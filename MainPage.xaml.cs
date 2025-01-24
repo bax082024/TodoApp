@@ -2,10 +2,13 @@
 
 namespace ToDoListApp;
 
+
 public partial class MainPage : ContentPage
 {
     // ObservableCollection to store tasks (update UI automatic)
     public ObservableCollection<TaskItem> Tasks { get; set; } = new();
+
+    private readonly DatabaseService _database;
 
     public MainPage()
     {
@@ -42,8 +45,4 @@ public partial class MainPage : ContentPage
     }
 }
 
-public class TaskItem
-{
-    public string Title { get; set; }
-    public bool IsCompleted { get; set; }
-}
+

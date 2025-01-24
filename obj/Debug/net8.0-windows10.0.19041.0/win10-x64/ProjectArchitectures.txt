@@ -1,0 +1,1 @@
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\TodoListApp.csproj;x64
