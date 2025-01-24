@@ -73,6 +73,16 @@ public partial class MainPage : ContentPage
             task.IsCompleted = e.Value; 
         }
     }
+
+    private void SortTasks()
+    {
+        var sortedTasks = Tasks.OrderBy(task => task.Priority).ToList();
+        Tasks.Clear();
+        foreach (var task in sortedTasks)
+        {
+            Tasks.Add(task);
+        }
+    }
 }
 
 
