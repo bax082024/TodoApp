@@ -19,10 +19,19 @@
             Padding="10"
             BackgroundColor="LightYellow"
             CornerRadius="10">
-            <Grid ColumnDefinitions="*, Auto, Auto" RowDefinitions="Auto">
+            <Grid ColumnDefinitions="*, Auto, Auto" RowDefinitions="Auto, Auto">
                 <!--  Task Entry  -->
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0,0,0,5"
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    Text="Enter a Task:"
+                    TextColor="Black" />
                 <Entry
                     x:Name="TaskEntry"
+                    Grid.Row="1"
                     Grid.Column="0"
                     Margin="0"
                     HorizontalOptions="Fill"
@@ -30,9 +39,19 @@
                     VerticalOptions="Center" />
 
                 <!--  Priority Picker  -->
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10,0,10,5"
+                    FontSize="14"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="Priority:"
+                    TextColor="Black" />
                 <Picker
                     x:Name="PriorityPicker"
                     Title="Priority"
+                    Grid.Row="1"
                     Grid.Column="1"
                     Margin="10,0,10,0"
                     HorizontalOptions="Center"
@@ -44,6 +63,7 @@
 
                 <!--  Add Button  -->
                 <Button
+                    Grid.RowSpan="2"
                     Grid.Column="2"
                     Padding="10"
                     BackgroundColor="#FFA500"
@@ -55,6 +75,7 @@
                     VerticalOptions="Center" />
             </Grid>
         </Frame>
+
 
         <!--  List of tasks  -->
         <CollectionView
