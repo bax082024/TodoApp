@@ -10,6 +10,9 @@ public partial class MainPage : ContentPage
 
     private readonly DatabaseService _database;
 
+    private TaskItem _draggedTask;
+    private int _draggedIndex;
+
     public MainPage()
     {
         InitializeComponent();
@@ -87,9 +90,63 @@ public partial class MainPage : ContentPage
     {
         if (sender is BindableObject bindable && bindable.BindingContext is TaskItem task)
         {
-            e.Data.Properties["Task"] = task; // Pass the dragged task as data
+            _draggedTask = task;
+            _draggedIndex = Tasks.IndexOf(task);
         }
     }
+
+
+    private void OnDropCompleted(object sender, DropCompletedEventArgs e)
+    {
+        if (_draggedTask != null)
+        {
+            // Ensure valid indices
+            var targetTask = (sender as BindableObject)?.BindingContext as TaskItem;
+            if (targetTask != null)
+            {
+                var targetIndex = Tasks.IndexOf(targetTask);
+                if (targetIndex >= 0 && _draggedIndex != targetIndex)
+                {
+                    Tasks.Remove(_draggedTask);
+                    Tasks.Insert(targetIndex, _draggedTask);
+                }
+            }
+            // Reset drag state
+            _draggedTask = null;
+            _draggedIndex = -1;
+        }
+    }
+
+
+    private void OnItemPanUpdated(object sender, PanUpdatedEventArgs e)
+    {
+        if (e.StatusType == GestureStatus.Started && sender is BindableObject bindable && bindable.BindingContext is TaskItem task)
+        {
+            _draggedTask = task;
+            _draggedIndex = Tasks.IndexOf(task);
+        }
+        else if (e.StatusType == GestureStatus.Completed)
+        {
+            // Handle drop
+            var targetTask = (sender as BindableObject)?.BindingContext as TaskItem;
+            if (_draggedTask != null && targetTask != null)
+            {
+                var targetIndex = Tasks.IndexOf(targetTask);
+                if (_draggedIndex >= 0 && targetIndex >= 0 && _draggedIndex != targetIndex)
+                {
+                    Tasks.Remove(_draggedTask);
+                    Tasks.Insert(targetIndex, _draggedTask);
+                }
+            }
+            // Reset state
+            _draggedTask = null;
+            _draggedIndex = -1;
+        }
+    }
+
+
+
+
 
 }
 

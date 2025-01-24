@@ -4,8 +4,11 @@
 <dict>
   <key>UIAppFonts</key>
   <array>
+	<string>BlackOpsOne-Regular.ttf</string>
+	<string>LexendGiga-VariableFont_wght.ttf</string>
 	<string>OpenSans-Regular.ttf</string>
 	<string>OpenSans-Semibold.ttf</string>
+	<string>SairaStencilOne-Regular.ttf</string>
   </array>
 
 </dict>

@@ -59,10 +59,7 @@
         <!--  List of tasks  -->
         <CollectionView
             x:Name="TaskList"
-            CanDrag="True"
-            CanDrop="True"
-            DragStarting="OnDragStarting"
-            DropCompleted="OnDropCompleted"
+            ItemsSource="{Binding Tasks}"
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -81,6 +78,11 @@
                             BackgroundColor="LightYellow"
                             CornerRadius="10">
                             <Grid Padding="5" ColumnDefinitions="Auto, *, Auto">
+                                <!--  Gesture Recognizer for Dragging  -->
+                                <Grid.GestureRecognizers>
+                                    <PanGestureRecognizer PanUpdated="OnItemPanUpdated" />
+                                </Grid.GestureRecognizers>
+
                                 <!--  Checkbox  -->
                                 <CheckBox
                                     CheckedChanged="OnTaskCheckedChanged"
@@ -108,5 +110,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+
     </VerticalStackLayout>
 </ContentPage>
