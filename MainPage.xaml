@@ -1,0 +1,39 @@
+﻿<ContentPage
+    x:Class="ToDoListApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="To-Do List">
+
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <!--  Entry for new tasks  -->
+        <HorizontalStackLayout>
+            <Entry
+                x:Name="TaskEntry"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Enter a new task" />
+            <Button Clicked="OnAddTaskClicked" Text="Add" />
+        </HorizontalStackLayout>
+
+        <!--  List of tasks  -->
+        <CollectionView x:Name="TaskList" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem
+                                    BackgroundColor="Red"
+                                    Invoked="OnDeleteTaskSwiped"
+                                    Text="Delete" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="5" ColumnDefinitions="Auto, *">
+                            <CheckBox CheckedChanged="OnTaskCheckedChanged" IsChecked="{Binding IsCompleted}" />
+                            <Label Text="{Binding Title}" VerticalOptions="Center" />
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
