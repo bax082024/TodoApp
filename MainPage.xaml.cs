@@ -13,7 +13,19 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        TaskList.ItemsSource = Tasks;
+        string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "tasks.db");
+        _database = new DatabaseService(dbPath);
+
+        LoadTasksAsync();
+    }
+
+    private async void LoadTasksAsync()
+    {
+        var tasks = await _database.GetTasksAsync();
+        foreach (var task in tasks)
+        {
+            Tasks.Add(task);
+        }
     }
 
     // Add new task
