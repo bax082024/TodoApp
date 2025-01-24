@@ -36,20 +36,19 @@ public partial class MainPage : ContentPage
     // Add new task
     private async void OnAddTaskClicked(object sender, EventArgs e)
     {
-        if (!string.IsNullOrWhiteSpace(TaskEntry.Text))
+        if (!string.IsNullOrWhiteSpace(TaskEntry.Text) && PriorityPicker.SelectedItem != null)
         {
-            var selectedPriority = PriorityPicker.SelectedItem?.ToString() ?? "Medium";
-
             var newTask = new TaskItem
             {
                 Title = TaskEntry.Text,
-                Priority = selectedPriority
+                Priority = PriorityPicker.SelectedItem.ToString()
             };
-
             Tasks.Add(newTask);
             TaskEntry.Text = string.Empty;
 
             await _database.SaveTaskAsync(newTask);
+
+            SortTasks();
         }
     }
 
