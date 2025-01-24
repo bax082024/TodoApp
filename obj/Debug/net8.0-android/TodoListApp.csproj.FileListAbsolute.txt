@@ -1055,3 +1055,6 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-android\stamp\_Con
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-android\resizetizer\f\BlackOpsOne-Regular.ttf
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-android\resizetizer\f\LexendGiga-VariableFont_wght.ttf
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-android\resizetizer\f\SairaStencilOne-Regular.ttf
