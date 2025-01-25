@@ -70,35 +70,20 @@
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\SairaStencilOne-Regular.ttf">
       <PackagePath>SairaStencilOne-Regular.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\bin.scale-100.png">
-      <PackagePath>bin.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\clock.scale-100.png">
+      <PackagePath>clock.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\downarrow.scale-100.png">
       <PackagePath>downarrow.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\clock.scale-100.png">
-      <PackagePath>clock.scale-100.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png">
       <PackagePath>delete.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\bin.scale-100.png">
+      <PackagePath>bin.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\uparrow.scale-100.png">
       <PackagePath>uparrow.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
-      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
-      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
-      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
-      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
-      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
@@ -237,6 +222,21 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TodoListApp.deps.json">
       <PackagePath>TodoListApp.deps.json</PackagePath>

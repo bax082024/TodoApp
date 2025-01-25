@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ToDoListApp;
-
-public class DatabaseService
+namespace ToDoListApp
 {
-    private readonly SQLiteAsyncConnection _database;
-
-    public DatabaseService(string dbPath)
+    public class DatabaseService
     {
-        _database = new SQLiteAsyncConnection(dbPath);
-        _database.CreateTableAsync<TaskItem>().Wait();
+        private readonly SQLiteAsyncConnection _database;
+
+        public DatabaseService(string dbPath)
+        {
+            var options = new SQLiteConnectionString(dbPath, true);
+            _database = new SQLiteAsyncConnection(options);
+
+            // Ensure the table is created
+            _database.CreateTableAsync<TaskItem>().Wait();
+        }
+
+        public Task<List<TaskItem>> GetTasksAsync() => _database.Table<TaskItem>().ToListAsync();
+
+        public Task<int> SaveTaskAsync(TaskItem task) => _database.InsertAsync(task);
+
+        public Task<int> DeleteTaskAsync(TaskItem task) => _database.DeleteAsync(task);
     }
-
-    public Task<List<TaskItem>> GetTasksAsync() => _database.Table<TaskItem>().ToListAsync();
-
-    public Task<int> SaveTaskAsync(TaskItem task) => _database.InsertAsync(task);
-
-    public Task<int> DeleteTaskAsync(TaskItem task) => _database.DeleteAsync(task);
 }

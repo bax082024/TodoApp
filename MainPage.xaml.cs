@@ -11,6 +11,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+       
         TaskList.ItemsSource = Tasks;
 
         string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "tasks.db");

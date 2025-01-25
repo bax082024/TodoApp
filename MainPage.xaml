@@ -133,14 +133,15 @@
                                     HorizontalOptions="End"
                                     Orientation="Vertical">
                                     <ImageButton
-                                        BackgroundColor="Transparent"
+                                        BackgroundColor="DarkGray"
                                         Clicked="OnMoveUpClicked"
                                         CommandParameter="{Binding .}"
                                         HeightRequest="30"
                                         Source="Resources/Images/uparrow.png"
                                         WidthRequest="30" />
                                     <ImageButton
-                                        BackgroundColor="Transparent"
+                                        BackgroundColor="DarkGray"
+                                         Margin="0,5,0,0"
                                         Clicked="OnMoveDownClicked"
                                         CommandParameter="{Binding .}"
                                         HeightRequest="30"
