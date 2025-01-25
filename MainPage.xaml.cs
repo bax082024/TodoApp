@@ -60,12 +60,14 @@ public partial class MainPage : ContentPage
     // Delete task
     private async void OnDeleteTaskSwiped(object sender, EventArgs e)
     {
-        if (sender is SwipeItem swipeItem && swipeItem.BindingContext is TaskItem task)
+        if (sender is ImageButton imageButton && imageButton.CommandParameter is TaskItem task)
         {
             Tasks.Remove(task);
             await _database.DeleteTaskAsync(task);
+            Console.WriteLine($"Task Deleted: {task.Title}");
         }
     }
+
 
 
     // Mark task complete
