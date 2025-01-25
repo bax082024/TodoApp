@@ -30,11 +30,20 @@ public partial class MainPage : ContentPage
 
     private async void OnAddTaskClicked(object sender, EventArgs e)
     {
-        if (!string.IsNullOrWhiteSpace(TaskEntry.Text))
+        Console.WriteLine($"TitleEntry.Text: {TitleEntry.Text}");
+        Console.WriteLine($"TaskEntry.Text: {TaskEntry.Text}");
+        if (!string.IsNullOrWhiteSpace(TitleEntry.Text) && !string.IsNullOrWhiteSpace(TaskEntry.Text))
         {
-            var newTask = new TaskItem { Title = TaskEntry.Text };
+            var newTask = new TaskItem
+            {
+                Title = TitleEntry.Text, 
+                Message = TaskEntry.Text
+            };
             Tasks.Add(newTask);
+            TitleEntry.Text = string.Empty;
             TaskEntry.Text = string.Empty;
+
+            Console.WriteLine($"Task Added: {newTask.Title} - {newTask.Message}");
             await _database.SaveTaskAsync(newTask);
         }
     }

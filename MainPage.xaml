@@ -1,9 +1,9 @@
 ﻿<ContentPage
     x:Class="ToDoListApp.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    BackgroundColor="DarkSlateGray">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <!--  Background Gradient  -->
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Offset="0.0" Color="#FF6347" />
@@ -13,68 +13,75 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
+    <!--  ScrollView for the entire page  -->
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
 
-    <Grid Padding="10" RowDefinitions="Auto, Auto, *">
-        <!--  Header Section  -->
-        <Grid Grid.Row="0" ColumnDefinitions="*, Auto">
-            <Label
-                Grid.ColumnSpan="3"
-                FontAttributes="Bold"
-                FontFamily="BlackOpsOne"
-                FontSize="32"
-                HorizontalOptions="Center"
-                Text="To-Do List"
-                TextColor="DarkSlateGray"
-                VerticalOptions="Center" />
-            <ImageButton
-                Grid.Column="1"
-                Margin="0,0,10,0"
-                BackgroundColor="Transparent"
-                Clicked="OnDeleteSelectedClicked"
-                HeightRequest="40"
-                HorizontalOptions="End"
-                Source="Resources/Images/delete.png"
-                WidthRequest="40" />
-        </Grid>
-
-        <!--  Input Section  -->
-        <Frame
-            Grid.Row="1"
-            Padding="10"
-            BackgroundColor="LightYellow"
-            CornerRadius="10">
-            <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
-                <!--  Title Entry  -->
-                <Entry
-                    x:Name="TitleEntry"
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Placeholder="Enter a title"
+            <!--  Header Section  -->
+            <Grid ColumnDefinitions="*, Auto">
+                <Label
+                    Grid.ColumnSpan="3"
+                    FontAttributes="Bold"
+                    FontFamily="BlackOpsOne"
+                    FontSize="36"
+                    HorizontalOptions="Center"
+                    Text="To-Do List"
+                    TextColor="DarkSlateGray"
                     VerticalOptions="Center" />
-
-                <!--  Task Entry  -->
-                <Entry
-                    x:Name="TaskEntry"
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Placeholder="Enter a new task"
-                    VerticalOptions="Center" />
-
-                <!--  Add Button  -->
-                <Button
-                    Grid.RowSpan="2"
+                <ImageButton
                     Grid.Column="1"
-                    BackgroundColor="#FFA500"
-                    Clicked="OnAddTaskClicked"
-                    CornerRadius="20"
-                    Text="Add"
-                    TextColor="White" />
+                    Margin="0,0,10,0"
+                    BackgroundColor="Red"
+                    Clicked="OnDeleteSelectedClicked"
+                    HeightRequest="40"
+                    HorizontalOptions="End"
+                    Source="Resources/Images/delete.png"
+                    WidthRequest="40" />
             </Grid>
-        </Frame>
 
+            <!--  Input Section  -->
+            <Frame
+                Padding="10"
+                BackgroundColor="LightYellow"
+                CornerRadius="10">
+                <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
+                    <!--  Title Entry  -->
+                    <Entry
+                        x:Name="TitleEntry"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Placeholder="Enter a title :"
+                        PlaceholderColor="DarkSlateGray"
+                        VerticalOptions="Center" />
 
-        <!--  Task List Section (Scrollable)  -->
-        <ScrollView Grid.Row="2">
+                    <!--  Task Entry  -->
+                    <Entry
+                        x:Name="TaskEntry"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Placeholder="Enter a new task :"
+                        PlaceholderColor="DarkSlateGray"
+                        VerticalOptions="Center" />
+
+                    <!--  Add Button  -->
+                    <Button
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        BackgroundColor="#FFA500"
+                        Clicked="OnAddTaskClicked"
+                        CornerRadius="20"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Text="Add"
+                        TextColor="DarkSlateGray" />
+                </Grid>
+            </Frame>
+
+            <!--  Task List Section  -->
             <CollectionView
                 x:Name="TaskList"
                 ItemsSource="{Binding Tasks}"
@@ -85,47 +92,67 @@
                             Margin="5"
                             BackgroundColor="LightYellow"
                             CornerRadius="10">
-                            <Grid Padding="5" ColumnDefinitions="Auto, *, Auto">
+                            <Grid
+                                Padding="5"
+                                ColumnDefinitions="Auto, *, Auto"
+                                RowDefinitions="Auto, Auto">
                                 <!--  Checkbox  -->
-                                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}" VerticalOptions="Center" />
-                                <!--  Task Title  -->
+                                <CheckBox
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    Margin="0,0,15,0"
+                                    BackgroundColor="LightYellow"
+                                    HorizontalOptions="Start"
+                                    IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                    VerticalOptions="Center"
+                                    Color="DarkSlateGray" />
+
+                                <!--  Title  -->
                                 <Label
                                     Grid.Column="1"
                                     FontAttributes="Bold"
-                                    FontSize="16"
+                                    FontSize="18"
                                     Text="{Binding Title}"
-                                    TextColor="Black"
-                                    VerticalOptions="Center" />
+                                    TextColor="Purple"
+                                    VerticalOptions="Start" />
+
+                                <!--  Message  -->
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="14"
+                                    Text="{Binding Message}"
+                                    TextColor="black"
+                                    VerticalOptions="End" />
+
                                 <!--  Move Buttons  -->
                                 <StackLayout
+                                    Grid.RowSpan="2"
                                     Grid.Column="2"
                                     HorizontalOptions="End"
                                     Orientation="Vertical">
-                                    <!--  Move Up Button  -->
                                     <ImageButton
-                                        BackgroundColor="Goldenrod"
+                                        BackgroundColor="Transparent"
                                         Clicked="OnMoveUpClicked"
                                         CommandParameter="{Binding .}"
                                         HeightRequest="30"
                                         Source="Resources/Images/uparrow.png"
                                         WidthRequest="30" />
-
-                                    <!--  Move Down Button  -->
                                     <ImageButton
-                                        Margin="0,5,0,0"
-                                        BackgroundColor="Goldenrod"
+                                        BackgroundColor="Transparent"
                                         Clicked="OnMoveDownClicked"
                                         CommandParameter="{Binding .}"
                                         HeightRequest="30"
                                         Source="Resources/Images/downarrow.png"
                                         WidthRequest="30" />
                                 </StackLayout>
-
                             </Grid>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </ScrollView>
-    </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
