@@ -4,14 +4,10 @@ namespace ToDoListApp
 {
     public class TaskItem
     {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-        public string Title { get; set; } = string.Empty;
-        public bool IsCompleted { get; set; }
+        public string Title { get; set; } = String.Empty; 
+        public string Description { get; set; } = String.Empty;
         public bool IsChecked { get; set; }
-
-
-     
     }
+
 
 }

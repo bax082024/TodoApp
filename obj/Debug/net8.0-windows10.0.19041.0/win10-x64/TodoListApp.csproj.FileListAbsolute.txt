@@ -109,7 +109,11 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\SairaStencilOne-Regular.ttf
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\downarrow.scale-100.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\bin.scale-100.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\uparrow.scale-100.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\clock.scale-100.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
@@ -190,4 +194,3 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\clock.scale-100.png

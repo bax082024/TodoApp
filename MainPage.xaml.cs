@@ -51,27 +51,28 @@ public partial class MainPage : ContentPage
 
     private void OnMoveUpClicked(object sender, EventArgs e)
     {
-        if (sender is Button button && button.CommandParameter is TaskItem task)
+        if (sender is ImageButton button && button.CommandParameter is TaskItem task)
         {
             var index = Tasks.IndexOf(task);
-            if (index > 0)
+            if (index > 0) // Ensure it's not the first item
             {
-                Tasks.Move(index, index - 1);
+                Tasks.Move(index, index - 1); // Move item up
             }
         }
     }
 
     private void OnMoveDownClicked(object sender, EventArgs e)
     {
-        if (sender is Button button && button.CommandParameter is TaskItem task)
+        if (sender is ImageButton button && button.CommandParameter is TaskItem task)
         {
             var index = Tasks.IndexOf(task);
-            if (index < Tasks.Count - 1)
+            if (index < Tasks.Count - 1) // Ensure it's not the last item
             {
-                Tasks.Move(index, index + 1);
+                Tasks.Move(index, index + 1); // Move item down
             }
         }
     }
+
 }
 
 

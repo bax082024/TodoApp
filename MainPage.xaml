@@ -4,6 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundColor="DarkSlateGray">
 
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.0" Color="#FF6347" />
+            <!--  Tomato  -->
+            <GradientStop Offset="1.0" Color="#FFD700" />
+            <!--  Gold  -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+
     <Grid Padding="10" RowDefinitions="Auto, Auto, *">
         <!--  Header Section  -->
         <Grid Grid.Row="0" ColumnDefinitions="*, Auto">
@@ -14,7 +24,7 @@
                 FontSize="32"
                 HorizontalOptions="Center"
                 Text="To-Do List"
-                TextColor="OrangeRed"
+                TextColor="DarkSlateGray"
                 VerticalOptions="Center" />
             <ImageButton
                 Grid.Column="1"
@@ -23,7 +33,7 @@
                 Clicked="OnDeleteSelectedClicked"
                 HeightRequest="40"
                 HorizontalOptions="End"
-                Source="Resources/Images/bin.png"
+                Source="Resources/Images/delete.png"
                 WidthRequest="40" />
         </Grid>
 
@@ -34,19 +44,23 @@
             BackgroundColor="LightYellow"
             CornerRadius="10">
             <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
-                <Label
+                <!--  Title Entry  -->
+                <Entry
+                    x:Name="TitleEntry"
                     Grid.Row="0"
                     Grid.Column="0"
-                    FontAttributes="Bold"
-                    FontSize="14"
-                    Text="Enter a Task:"
-                    TextColor="Black" />
+                    Placeholder="Enter a title"
+                    VerticalOptions="Center" />
+
+                <!--  Task Entry  -->
                 <Entry
                     x:Name="TaskEntry"
                     Grid.Row="1"
                     Grid.Column="0"
                     Placeholder="Enter a new task"
                     VerticalOptions="Center" />
+
+                <!--  Add Button  -->
                 <Button
                     Grid.RowSpan="2"
                     Grid.Column="1"
@@ -57,6 +71,7 @@
                     TextColor="White" />
             </Grid>
         </Frame>
+
 
         <!--  Task List Section (Scrollable)  -->
         <ScrollView Grid.Row="2">
@@ -76,30 +91,36 @@
                                 <!--  Task Title  -->
                                 <Label
                                     Grid.Column="1"
+                                    FontAttributes="Bold"
                                     FontSize="16"
                                     Text="{Binding Title}"
+                                    TextColor="Black"
                                     VerticalOptions="Center" />
                                 <!--  Move Buttons  -->
                                 <StackLayout
                                     Grid.Column="2"
                                     HorizontalOptions="End"
                                     Orientation="Vertical">
-                                    <Button
+                                    <!--  Move Up Button  -->
+                                    <ImageButton
                                         BackgroundColor="Goldenrod"
                                         Clicked="OnMoveUpClicked"
                                         CommandParameter="{Binding .}"
-                                        FontSize="14"
-                                        Text="↑"
-                                        TextColor="Black" />
-                                    <Button
+                                        HeightRequest="30"
+                                        Source="Resources/Images/uparrow.png"
+                                        WidthRequest="30" />
+
+                                    <!--  Move Down Button  -->
+                                    <ImageButton
                                         Margin="0,5,0,0"
                                         BackgroundColor="Goldenrod"
                                         Clicked="OnMoveDownClicked"
                                         CommandParameter="{Binding .}"
-                                        FontSize="14"
-                                        Text="↓"
-                                        TextColor="Black" />
+                                        HeightRequest="30"
+                                        Source="Resources/Images/downarrow.png"
+                                        WidthRequest="30" />
                                 </StackLayout>
+
                             </Grid>
                         </Frame>
                     </DataTemplate>

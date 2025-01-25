@@ -266,7 +266,11 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccat
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\delete.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\downarrow.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\bin.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\clock.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\uparrow.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -312,4 +316,3 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccat
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TodoListApp.pdb
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\TodoListApp.genruntimeconfig.cache
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\TodoListApp.dll
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\clock.png
