@@ -4,17 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundColor="DarkSlateGray">
 
-    <VerticalStackLayout Padding="10" Spacing="10">
+    <Grid Padding="10" RowDefinitions="Auto, Auto, *">
         <!--  Header Section  -->
-        <Grid ColumnDefinitions="*, Auto">
+        <Grid Grid.Row="0" ColumnDefinitions="*, Auto">
             <Label
+                Grid.ColumnSpan="3"
                 FontAttributes="Bold"
                 FontFamily="BlackOpsOne"
                 FontSize="32"
-                HorizontalOptions="Start"
+                HorizontalOptions="Center"
                 Text="To-Do List"
-                TextColor="OrangeRed" />
+                TextColor="OrangeRed"
+                VerticalOptions="Center" />
             <ImageButton
+                Grid.Column="1"
+                Margin="0,0,10,0"
                 BackgroundColor="Transparent"
                 Clicked="OnDeleteSelectedClicked"
                 HeightRequest="40"
@@ -25,6 +29,7 @@
 
         <!--  Input Section  -->
         <Frame
+            Grid.Row="1"
             Padding="10"
             BackgroundColor="LightYellow"
             CornerRadius="10">
@@ -53,8 +58,8 @@
             </Grid>
         </Frame>
 
-        <!--  Task List  -->
-        <ScrollView>
+        <!--  Task List Section (Scrollable)  -->
+        <ScrollView Grid.Row="2">
             <CollectionView
                 x:Name="TaskList"
                 ItemsSource="{Binding Tasks}"
@@ -87,6 +92,7 @@
                                         Text="↑"
                                         TextColor="Black" />
                                     <Button
+                                        Margin="0,5,0,0"
                                         BackgroundColor="Goldenrod"
                                         Clicked="OnMoveDownClicked"
                                         CommandParameter="{Binding .}"
@@ -100,5 +106,5 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

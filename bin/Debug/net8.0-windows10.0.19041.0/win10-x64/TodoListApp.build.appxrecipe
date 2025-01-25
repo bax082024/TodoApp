@@ -70,6 +70,9 @@
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\SairaStencilOne-Regular.ttf">
       <PackagePath>SairaStencilOne-Regular.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\clock.scale-100.png">
+      <PackagePath>clock.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\bin.scale-100.png">
       <PackagePath>bin.scale-100.png</PackagePath>
     </AppxPackagedFile>
