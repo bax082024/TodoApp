@@ -19,7 +19,7 @@
             Padding="10"
             BackgroundColor="LightYellow"
             CornerRadius="10">
-            <Grid ColumnDefinitions="*, Auto, Auto" RowDefinitions="Auto, Auto">
+            <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto">
                 <!--  Task Entry  -->
                 <Label
                     Grid.Row="0"
@@ -38,33 +38,10 @@
                     Placeholder="Enter a new task"
                     VerticalOptions="Center" />
 
-                <!--  Priority Picker  -->
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Margin="10,0,10,5"
-                    FontSize="14"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"
-                    Text="Priority:"
-                    TextColor="Black" />
-                <Picker
-                    x:Name="PriorityPicker"
-                    Title="Priority"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Margin="10,0,10,0"
-                    HorizontalOptions="Center"
-                    ItemsSource="{StaticResource PriorityList}"
-                    SelectedItem="{Binding SelectedPriority, Mode=TwoWay}"
-                    TextColor="Black"
-                    VerticalOptions="Center"
-                    WidthRequest="100" />
-
                 <!--  Add Button  -->
                 <Button
                     Grid.RowSpan="2"
-                    Grid.Column="2"
+                    Grid.Column="1"
                     Padding="10"
                     BackgroundColor="#FFA500"
                     Clicked="OnAddTaskClicked"
@@ -76,7 +53,6 @@
             </Grid>
         </Frame>
 
-
         <!--  List of tasks  -->
         <CollectionView
             x:Name="TaskList"
@@ -84,53 +60,66 @@
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <SwipeView>
-                        <SwipeView.RightItems>
-                            <SwipeItems>
-                                <SwipeItem
-                                    BackgroundColor="Red"
-                                    Invoked="OnDeleteTaskSwiped"
-                                    Text="Delete" />
-                            </SwipeItems>
-                        </SwipeView.RightItems>
-                        <Frame
-                            Margin="5"
-                            Padding="10"
-                            BackgroundColor="LightYellow"
-                            CornerRadius="10">
-                            <Grid Padding="5" ColumnDefinitions="Auto, *, Auto">
-                                <!--  Gesture Recognizer for Dragging  -->
-                                <Grid.GestureRecognizers>
-                                    <PanGestureRecognizer PanUpdated="OnItemPanUpdated" />
-                                </Grid.GestureRecognizers>
+                    <Frame
+                        Margin="5"
+                        Padding="10"
+                        BackgroundColor="LightYellow"
+                        CornerRadius="10">
+                        <Grid Padding="5" ColumnDefinitions="Auto, *, Auto, Auto">
+                            <!--  Checkbox  -->
+                            <CheckBox
+                                CheckedChanged="OnTaskCheckedChanged"
+                                IsChecked="{Binding IsCompleted}"
+                                VerticalOptions="Center" />
 
-                                <!--  Checkbox  -->
-                                <CheckBox
-                                    CheckedChanged="OnTaskCheckedChanged"
-                                    IsChecked="{Binding IsCompleted}"
-                                    VerticalOptions="Center" />
+                            <!--  Task Title  -->
+                            <Label
+                                Grid.Column="1"
+                                FontSize="16"
+                                Text="{Binding Title}"
+                                VerticalOptions="Center" />
 
-                                <!--  Task Title  -->
-                                <Label
-                                    Grid.Column="1"
-                                    FontSize="16"
-                                    Text="{Binding Title}"
-                                    VerticalOptions="Center" />
+                            <!--  Move Buttons  -->
+                            <StackLayout
+                                Grid.Column="2"
+                                HorizontalOptions="End"
+                                Orientation="Vertical">
+                                <Button
+                                    BackgroundColor="Goldenrod"
+                                    Clicked="OnMoveUpClicked"
+                                    CommandParameter="{Binding .}"
+                                    CornerRadius="5"
+                                    FontSize="20"
+                                    HeightRequest="40"
+                                    Text="↑"
+                                    TextColor="Black" />
+                                <Button
+                                    Margin="0,5,0,0"
+                                    BackgroundColor="Goldenrod"
+                                    Clicked="OnMoveDownClicked"
+                                    CommandParameter="{Binding .}"
+                                    CornerRadius="5"
+                                    FontSize="20"
+                                    HeightRequest="40"
+                                    Text="↓"
+                                    TextColor="Black" />
+                            </StackLayout>
 
-                                <!--  Priority  -->
-                                <Label
-                                    Grid.Column="2"
-                                    FontSize="14"
-                                    HorizontalOptions="End"
-                                    Text="{Binding Priority}"
-                                    TextColor="{Binding Priority, Converter={StaticResource PriorityColorConverter}}"
-                                    VerticalOptions="Center" />
-                            </Grid>
-                        </Frame>
-                    </SwipeView>
+                            <!--  Trashcan Icon  -->
+                            <ImageButton
+                                Grid.Column="3"
+                                Margin="10,0,0,0"
+                                BackgroundColor="LightGray"
+                                Clicked="OnDeleteTaskSwiped"
+                                CommandParameter="{Binding .}"
+                                HeightRequest="40"
+                                HorizontalOptions="End"
+                                Source="Resources/Images/bin.png"
+                                WidthRequest="25" />
+                        </Grid>
+                    </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
     </VerticalStackLayout>
 </ContentPage>

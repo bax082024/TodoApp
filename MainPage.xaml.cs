@@ -39,21 +39,22 @@ public partial class MainPage : ContentPage
     // Add new task
     private async void OnAddTaskClicked(object sender, EventArgs e)
     {
-        if (!string.IsNullOrWhiteSpace(TaskEntry.Text) && PriorityPicker.SelectedItem != null)
+        Console.WriteLine($"TaskEntry.Text: {TaskEntry.Text}");
+        if (!string.IsNullOrWhiteSpace(TaskEntry.Text))
         {
             var newTask = new TaskItem
             {
-                Title = TaskEntry.Text,
-                Priority = PriorityPicker.SelectedItem.ToString()
+                Title = TaskEntry.Text
             };
             Tasks.Add(newTask);
             TaskEntry.Text = string.Empty;
 
+            Console.WriteLine($"Task Added: {newTask.Title}");
             await _database.SaveTaskAsync(newTask);
-
-            SortTasks();
         }
     }
+
+
 
 
     // Delete task
@@ -74,17 +75,7 @@ public partial class MainPage : ContentPage
         {
             task.IsCompleted = e.Value; 
         }
-    }
-
-    private void SortTasks()
-    {
-        var sortedTasks = Tasks.OrderBy(task => task.Priority).ToList();
-        Tasks.Clear();
-        foreach (var task in sortedTasks)
-        {
-            Tasks.Add(task);
-        }
-    }
+    }   
 
     private void OnDragStarting(object sender, DragStartingEventArgs e)
     {
@@ -120,29 +111,68 @@ public partial class MainPage : ContentPage
 
     private void OnItemPanUpdated(object sender, PanUpdatedEventArgs e)
     {
-        if (e.StatusType == GestureStatus.Started && sender is BindableObject bindable && bindable.BindingContext is TaskItem task)
+        if (sender is BindableObject bindable && bindable.BindingContext is TaskItem task)
         {
-            _draggedTask = task;
-            _draggedIndex = Tasks.IndexOf(task);
-        }
-        else if (e.StatusType == GestureStatus.Completed)
-        {
-            // Handle drop
-            var targetTask = (sender as BindableObject)?.BindingContext as TaskItem;
-            if (_draggedTask != null && targetTask != null)
+            switch (e.StatusType)
             {
-                var targetIndex = Tasks.IndexOf(targetTask);
-                if (_draggedIndex >= 0 && targetIndex >= 0 && _draggedIndex != targetIndex)
-                {
-                    Tasks.Remove(_draggedTask);
-                    Tasks.Insert(targetIndex, _draggedTask);
-                }
+                case GestureStatus.Started:
+                    // Start drag
+                    _draggedTask = task;
+                    _draggedIndex = Tasks.IndexOf(task);
+                    break;
+
+                case GestureStatus.Completed:
+                    if (_draggedTask != null)
+                    {
+                        // Calculate the new position
+                        var targetIndex = _draggedIndex + (int)(e.TotalY / 50); // Adjust sensitivity
+                        targetIndex = Math.Clamp(targetIndex, 0, Tasks.Count - 1);
+
+                        if (targetIndex != _draggedIndex)
+                        {
+                            // Reorder the tasks
+                            Tasks.Remove(_draggedTask);
+                            Tasks.Insert(targetIndex, _draggedTask);
+                        }
+                    }
+
+                    // Reset drag state
+                    _draggedTask = null;
+                    _draggedIndex = -1;
+                    break;
             }
-            // Reset state
-            _draggedTask = null;
-            _draggedIndex = -1;
         }
     }
+
+    private void OnMoveUpClicked(object sender, EventArgs e)
+    {
+        if (sender is Button button && button.CommandParameter is TaskItem task)
+        {
+            var index = Tasks.IndexOf(task);
+            if (index > 0) // Ensure it's not the first item
+            {
+                Tasks.Move(index, index - 1); // Move item up
+            }
+        }
+    }
+
+    private void OnMoveDownClicked(object sender, EventArgs e)
+    {
+        if (sender is Button button && button.CommandParameter is TaskItem task)
+        {
+            var index = Tasks.IndexOf(task);
+            if (index < Tasks.Count - 1) // Ensure it's not the last item
+            {
+                Tasks.Move(index, index + 1); // Move item down
+            }
+        }
+    }
+
+
+
+
+
+
 
 
 

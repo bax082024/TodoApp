@@ -109,11 +109,7 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\SairaStencilOne-Regular.ttf
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\bin.scale-100.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
@@ -160,6 +156,11 @@ C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
+C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.outputs
 C:\HjemmeKode\C-Sharp\MyProjects\TodoListApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TodoListApp.AssemblyInfoInputs.cache
