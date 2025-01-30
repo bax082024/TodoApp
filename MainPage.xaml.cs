@@ -64,9 +64,9 @@ public partial class MainPage : ContentPage
         if (sender is ImageButton button && button.CommandParameter is TaskItem task)
         {
             var index = Tasks.IndexOf(task);
-            if (index > 0) // Ensure it's not the first item
+            if (index > 0)
             {
-                Tasks.Move(index, index - 1); // Move item up
+                Tasks.Move(index, index - 1);
             }
         }
     }
@@ -76,9 +76,9 @@ public partial class MainPage : ContentPage
         if (sender is ImageButton button && button.CommandParameter is TaskItem task)
         {
             var index = Tasks.IndexOf(task);
-            if (index < Tasks.Count - 1) // Ensure it's not the last item
+            if (index < Tasks.Count - 1)
             {
-                Tasks.Move(index, index + 1); // Move item down
+                Tasks.Move(index, index + 1);
             }
         }
     }
