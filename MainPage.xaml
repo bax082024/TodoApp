@@ -3,17 +3,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <!--  Background Gradient  -->
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Offset="0.0" Color="#FF6347" />
-            <!--  Tomato  -->
             <GradientStop Offset="1.0" Color="#FFD700" />
-            <!--  Gold  -->
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <!--  ScrollView for the entire page  -->
     <ScrollView>
         <VerticalStackLayout Padding="10" Spacing="10">
 
