@@ -13,7 +13,6 @@ namespace ToDoListApp
             var options = new SQLiteConnectionString(dbPath, true);
             _database = new SQLiteAsyncConnection(options);
 
-            // Ensure the table is created
             _database.CreateTableAsync<TaskItem>().Wait();
         }
 
